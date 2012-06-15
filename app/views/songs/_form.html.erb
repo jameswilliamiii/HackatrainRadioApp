@@ -1,0 +1,5 @@
+<%= form_for @song, :html => { :multipart => true } do |f| %>
+	<p><%= f.label :track, 'Upload new file' %></p>
+	<p><%= f.file_field :track %></p>
+	<p><%= f.submit 'Submit'%></p>
+<% end %>
