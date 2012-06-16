@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
+
+<!-- <head>
+    <title>Hackatrain Radio Sign In</title>
+    <link rel="stylesheet" href="Sign In.css">
+</head>
+<Header><div class="signin">
+Hackatrain<br/> Radio</div>
+<div class="logo"><img src="SmallLOGO.jpg"> </div>
+</Header>
+<article>
+<p></p>
+</article> -->
+
+
+
 <head>
-  <title>HackatrainRadio</title>
+  <title>Hackatrain Radio</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-		  $("#jquery_jplayer_1").jPlayer({
-		    ready: function () {
-		      $(this).jPlayer("setMedia", { mp3:
-				 "https://s3.amazonaws.com/hackatrain/assets/songs/1/original.mp3"
-		      });
-		// Need to figure out a way to not have MP3 as public file.
-		
-		    },
-		    swfPath: "/public",
-		    supplied: "mp3"
-		  });
-		});
-	</script>
-
 </head>
-<body>
 
+<header>Hackatrain <br/>Radio<%= link_to image_tag("SmallLOGO.jpg"), root_url %></header><body>
+<article>
 <%= yield %>
-
+</article>
 </body>
 </html>

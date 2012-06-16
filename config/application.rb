@@ -62,7 +62,10 @@ module HackatrainRadioApp
     #     :secret_access_key => ENV['AMAZON_SECRET_ACCESS_KEY']
     #     )
         
-    
+    AWS::S3::Base.establish_connection!(  
+        :access_key_id     => 'AKIAJ2VDFUX6S3SK74QA',  
+        :secret_access_key => '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'
+        )
     
   end
 end
