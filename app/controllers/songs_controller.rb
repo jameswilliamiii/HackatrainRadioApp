@@ -9,9 +9,8 @@ class SongsController < ApplicationController
 
   def upload
     begin
-      upload = Upload.create(:user_id => @user.id, :name => sanitize_filename(params[:mp3file].original_filename), :like => 0, :dislike => 0)
       AWS::S3::S3Object.store(sanitize_filename(params[:mp3file].original_filename), params[:mp3file].read, 'hackatrain', :access => :public_read)
-      redirect_to root_path  
+      redirect_to root_path
       
     rescue  
       render :text => "Couldn't complete the upload"  
@@ -31,12 +30,14 @@ class SongsController < ApplicationController
     upload = Upload.find_by_id params[:name]
     new_value = upload.like + 1
     upload.update_attributes(:like => new_value)
+    redirect_to root_path
   end
 
   def totally_bunk
     upload = Upload.find_by_id params[:name]
     new_value = upload.like - 1
     upload.update_attributes(:like => new_value)
+    redirect_to root_path
   end
   
   private  

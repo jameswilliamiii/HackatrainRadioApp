@@ -3,8 +3,8 @@
     <tr>  
         <td><%= song.key %></td>  
         <td><%= link_to "Play ", download_url_for(song.key), :class => "html5" %></td> 
-  			<td><%= link_to "Hell Yeah", hell_yeah_path, :name => song.key, remote: true %></td>
-				<td><%= link_to "Totally Bunk", totally_bunk_path, :name => song.key, remote: true %></td>
+  			<td><%= link_to "Hell Yeah", { :controller => 'songs', :action => 'hell_yeah', :name => song.key} %></td>
+				<td><%= link_to "Totally Bunk", { :controller => 'songs', :action => 'totally_bunk', :name => song.key} %></td>
         <td> <%= link_to " Delete",  "songs/delete/?song=" + song.key, :confirm => 'Are you sure you want to delete ' + song.key + '?' %></td>  
     </tr>
 <% end %>  

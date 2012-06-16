@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username params[:email]
+    user = User.find_by_username params[:username]
     if user
       if user.authenticate(params[:password])
         flash[:notice] = "Welcome #{user.username}!"
