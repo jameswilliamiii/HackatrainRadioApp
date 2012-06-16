@@ -55,5 +55,14 @@ module HackatrainRadioApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+    # AWS::S3::Base.establish_connection!(  
+    #     :access_key_id     => ENV['AMAZON_ACCESS_KEY_ID'],  
+    #     :secret_access_key => ENV['AMAZON_SECRET_ACCESS_KEY']
+    #     )
+        
+    
+    
   end
 end

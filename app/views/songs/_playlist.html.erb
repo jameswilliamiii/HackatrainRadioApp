@@ -1,0 +1,8 @@
+<% @songs.each do |song| %>  
+    <tr>  
+        <td><%= song.key %></td>  
+        <td></td>   
+        <td><%= link_to "Delete",  "songs/delete/?song=" + song.key, :confirm => 'Are you sure you want to delete ' + song.key + '?' %></td>  
+    </tr>  
+<% end %>  
+</table>

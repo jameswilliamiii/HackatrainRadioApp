@@ -1,5 +1,4 @@
-<%= form_for @song, :html => { :multipart => true } do |f| %>
-	<p><%= f.label :track, 'Upload new file' %></p>
-	<p><%= f.file_field :track %></p>
-	<p><%= f.submit 'Submit'%></p>
+ <%= form_tag upload_path, :method => "post", :multipart => true do %>  
+    <%= file_field_tag "mp3file" %>  
+    <%= submit_tag "Upload" %>  
 <% end %>

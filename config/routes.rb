@@ -1,9 +1,8 @@
 HackatrainRadioApp::Application.routes.draw do
   
-  root :to => 'songs#index'
-  
-  get    "songs" => 'songs#index'
-  post   "songs" => 'songs#upload'
-  delete "songs" => 'songs#delete'
+  match "songs/upload", :as => :upload  
+  match "songs/delete", :as => :delete  
+
+  root :to => "songs#index"
 
 end

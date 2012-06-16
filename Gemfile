@@ -29,13 +29,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'aws-sdk', '~> 1.3.4'
-gem "paperclip", "~> 3.0"
-gem 'ruby-mp3info', :require => 'mp3info'
+gem 'aws-s3'
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
