@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20120616195623) do
 
+  create_table "tracks", :force => true do |t|
+    t.string   "song"
+    t.integer  "user_id"
+    t.string   "artist"
+    t.string   "album"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
   create_table "uploads", :force => true do |t|
     t.integer  "user_id"
     t.integer  "like"

@@ -57,8 +57,15 @@ body{
     color: #333;
     width: 67%;
     margin: 0 auto;
+    -webkit-box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.75);
 }
 
+h2{
+  color: ##855f2e;
+  font-weight: 400;
+}
 /*HEADER*/ 
 
 header{
@@ -66,14 +73,16 @@ header{
     position: relative;
     margin-top: 1em;
     padding-left: 13%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: left;
     line-height: 1em;
     background: #e5e2e2;
-    color: #17075f;
-    font-size: 3em;
-    font-weight: 400;
-    text-shadow: 5px 5px 5px #f0ecee;
-    border-bottom: 3px solid #f2ae59;
+    color: #205e87;
+    font-size: 2em;
+    font-weight: 200;
+    text-shadow: 1px 1px 3px #435BA2;
+    border-bottom: 3px solid #f5cf9f;
 }
 .signin{
     min-width: 30%;
@@ -81,14 +90,14 @@ header{
 img{
     position: absolute;
     right: 1em;
-    top: 30px;
+    top: 5px;
 }
+/*MAIN*/
 article{
+    padding-top: 8%;
     padding-left: 13%;
-    height: 28em;
-    background: #f78546;
-    -moz-box-shadow: 0 0 5px #888888;
-    -webkit-box-shadow: 0 0 5px #888888;
-    box-shadow: 0 0 5px #888888;
-}
+    height: 20em;
+    background: #f3d8a1;
+  }
+
 

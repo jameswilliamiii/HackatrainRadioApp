@@ -15,9 +15,6 @@ Hackatrain<br/> Radio</div>
 
 
 
-
-
-
 <head>
   <title>Hackatrain Radio</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -25,9 +22,10 @@ Hackatrain<br/> Radio</div>
   <%= csrf_meta_tags %>
 
 </head>
-<body>
 
+<header>Hackatrain <br/>Radio<%= link_to image_tag("SmallLOGO.jpg"), root_url %></header><body>
+<article>
 <%= yield %>
-
+</article>
 </body>
 </html>
